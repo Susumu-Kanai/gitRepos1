@@ -30,7 +30,7 @@ void clearCache(int from_id, int to_id)
 {
     int i;
     for (i = from_id; i <= to_id; i++) {
-        if (i>=0 && i<1000 && cache[i] != 0) {
+        if (cache[i] != 0) {
             free(cache[i]);
             cache[i] = 0;
         }
