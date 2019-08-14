@@ -20,7 +20,7 @@ Person* selectPerson()
     /* Uncomment to fix accessing out of bounds */
     /* id = clip(id, 0, CACHE_SIZE - 1); */
    
-    if (cache[id] == 0) {
+    if (id >=0 && id < 1000 && cache[id] == 0) {
         cache[id] = retrievePersonFromDB(id);
     }
     return cache[id];
